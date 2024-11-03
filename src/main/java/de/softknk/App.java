@@ -1,0 +1,12 @@
+package de.softknk;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+
+    public static void main(String[] args) {
+        
+    }
+}
