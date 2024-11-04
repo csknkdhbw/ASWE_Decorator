@@ -1,10 +1,18 @@
-package de.softknk.eventDecorator;
+package de.softknk.eventdecorator;
 
-import de.softnk.Event;
+import de.softknk.Event;
 
 public abstract class EventDecorator extends Event {
 
     protected Event wrapperEvent;
+
+    /**
+     * Basic constructor to assign wrapper object
+     */
+    protected EventDecorator(Event wrapperEvent) {
+        this.wrapperEvent = wrapperEvent;
+        setMessage(wrapperEvent.getMessage());
+    }
 
     public Event getWrapperEvent() {
         return wrapperEvent;
