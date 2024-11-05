@@ -16,10 +16,16 @@ public class FileLoggingDecorator extends EventDecorator {
     }
 
     @Override
-    public void eventNotify() {
-        appendToFile(filePath, getMessage());
+    public boolean checkEventAndNotify() {
         // Notify wrapper object
-        wrapperEvent.eventNotify();
+        boolean isNewEvent = wrapperEvent.checkEventAndNotify();
+        
+        if (isNewEvent) {
+            setMessage(wrapperEvent.getMessage());
+            appendToFile(filePath, getMessage());
+        }
+
+        return isNewEvent;
     }
 
     /**

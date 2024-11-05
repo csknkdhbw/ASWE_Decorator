@@ -38,10 +38,16 @@ public class MailEventDecorator extends EventDecorator {
     }
 
     @Override
-    public void eventNotify() {
-        sendMail();
+    public boolean checkEventAndNotify() {
         // Notify wrapper object
-        wrapperEvent.eventNotify();
+        boolean isNewEvent = wrapperEvent.checkEventAndNotify();
+        
+        if (isNewEvent) {
+            setMessage(wrapperEvent.getMessage());
+            sendMail();
+        }
+
+        return isNewEvent;
     }
 
     private void sendMail() {

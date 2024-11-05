@@ -5,9 +5,10 @@ public abstract class Event {
 
     /**
      * To be defined by decorator classes in order to
-     * notify someone about the occuring event
+     * notify someone about the occuring event.
+     * Returns true, if new event is available, false otherwise
      */
-    public abstract void eventNotify();
+    public abstract boolean checkEventAndNotify();
 
     public void setMessage(String message) {
         this.message = message;

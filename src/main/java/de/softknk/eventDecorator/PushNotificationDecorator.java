@@ -9,7 +9,7 @@ public class PushNotificationDecorator extends EventDecorator {
     }
 
     @Override
-    public void eventNotify() {
+    public boolean checkEventAndNotify() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

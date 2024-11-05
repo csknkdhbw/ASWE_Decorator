@@ -30,6 +30,27 @@
             <artifactId>javax.mail</artifactId>
             <version>1.6.2</version> <!-- Check for the latest version -->
         </dependency>
+
+        <!-- Jackson Core -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.13.0</version>
+        </dependency>
+    
+        <!-- Jackson Databind (for ObjectMapper) -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.0</version>
+        </dependency>
+    
+        <!-- Jackson Annotations (optional but useful for annotations) -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.13.0</version>
+        </dependency>
     </dependencies>
 
     <build>
