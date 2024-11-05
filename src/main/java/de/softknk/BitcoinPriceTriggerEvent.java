@@ -10,11 +10,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class BitcoinPriceTriggerEvent extends Event {
 
-    private static final String API_URL = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd";
-    private static final HttpClient client = HttpClient.newHttpClient();
-    private static final ObjectMapper mapper = new ObjectMapper();
+    private static final String API_URL;
+    private static final HttpClient client;
+    private static final ObjectMapper mapper;
 
     private int priceLimit;
+
+    static {
+        API_URL = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd";
+        client = HttpClient.newHttpClient();
+        mapper = new ObjectMapper();
+    }
 
     public BitcoinPriceTriggerEvent(int priceLimit) {
         // Price Limit cannot be below zero
