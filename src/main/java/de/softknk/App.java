@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import de.softknk.eventdecorator.FileLoggingDecorator;
 import de.softknk.eventdecorator.MailEventDecorator;
+import de.softknk.eventdecorator.PushNotificationDecorator;
 
 /**
  * MAIN
@@ -17,11 +18,10 @@ public class App {
     private static ScheduledExecutorService scheduler;
 
     public static void main(String[] args) {
-        Event v = new TestEvent("Was läuft heute?\nWas geeeeeeeeht abbbbb");
     //    v = new MailEventDecorator(v, "Whaaaaats uppp", "daniel.kuenkel2003@gmail.com");
     //    v = new FileLoggingDecorator(v, "C:\\Users\\DKUENKE\\Desktop\\test.txt");
 
-        v.checkEventAndNotify();
+    //    v.checkEventAndNotify();
 
 
 
@@ -32,9 +32,10 @@ public class App {
      //   scheduler.scheduleAtFixedRate(App::btcTriggerSchedule, 0, 5, TimeUnit.MINUTES);
 
         CalenderEvent v3 = new CalenderEvent();
-        v3.addCalenderEvent(LocalDate.of(2024, 11, 5), "Heute ist die US-Wahl!");
+        v3.addCalenderEvent(LocalDate.of(2024, 11, 5), "Trump gewinnt heute die Wahl.");
 
         Event v4 = new FileLoggingDecorator(v3, "C:\\Users\\DKUENKE\\Desktop\\test.txt");
+        v4 = new PushNotificationDecorator(v4);
         v4.checkEventAndNotify();
     }
 
