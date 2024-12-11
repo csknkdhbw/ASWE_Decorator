@@ -1,4 +1,4 @@
-package de.softnk;
+package de.inf22111;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

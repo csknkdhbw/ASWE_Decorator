@@ -1,6 +1,6 @@
-package de.softknk.eventdecorator;
+package de.inf22111.eventdecorator;
 
-import de.softknk.Event;
+import de.inf22111.Event;
 
 public class PushNotificationDecorator extends EventDecorator {
     private static final String mailSubject;
@@ -8,7 +8,7 @@ public class PushNotificationDecorator extends EventDecorator {
 
     static {
         mailSubject = "CALENDER ALERT";
-        pushOverMail = "arkxexqata@pomail.net";
+        pushOverMail = "f6utwyds77@pomail.net";
     }
 
     public PushNotificationDecorator(Event wrapperEvent) {

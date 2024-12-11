@@ -1,4 +1,4 @@
-package de.softknk;
+package de.inf22111;
 
 public abstract class Event {
     private String message;

@@ -1,11 +1,11 @@
-package de.softknk.eventdecorator;
+package de.inf22111.eventdecorator;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import de.softknk.Event;
+import de.inf22111.Event;
 
 public class FileLoggingDecorator extends EventDecorator {
     private String filePath;

@@ -1,4 +1,4 @@
-package de.softknk;
+package de.inf22111;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -32,6 +32,8 @@ public class BitcoinPriceTriggerEvent extends Event {
 
     @Override
     public boolean checkEventAndNotify() {
+        System.out.println("Checking Bitcoin price ...");
+        
         int btcPrice = fetchBitcoinPrice();
 
         if (btcPrice >= priceLimit) {

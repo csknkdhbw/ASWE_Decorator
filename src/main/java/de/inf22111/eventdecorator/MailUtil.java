@@ -1,4 +1,4 @@
-package de.softknk.eventdecorator;
+package de.inf22111.eventdecorator;
 
 import java.util.Properties;
 

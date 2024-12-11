@@ -1,4 +1,4 @@
-package de.softknk;
+package de.inf22111;
 
 import java.time.LocalDate;
 import java.util.Map;

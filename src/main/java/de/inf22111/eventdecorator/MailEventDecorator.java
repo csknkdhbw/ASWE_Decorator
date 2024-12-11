@@ -1,6 +1,6 @@
-package de.softknk.eventdecorator;
+package de.inf22111.eventdecorator;
 
-import de.softknk.Event;
+import de.inf22111.Event;
 
 public class MailEventDecorator extends EventDecorator {
 
